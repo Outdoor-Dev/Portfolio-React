@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 
 //include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
 
 //create your first component
 export function Home() {
+	const [offset, setOffSet] = useState();
+	const handleScroll = () => setOffSet(window.pageYOffset);
+	window.addEventListener("scroll", handleScroll);
+
 	return (
 		<>
 			<section>
@@ -14,27 +17,25 @@ export function Home() {
 				/>
 
 				<img className="mountain" src="mountain.png" id="mountain" />
-				<img className="lake" src="mountLeft.png" id="mountLeft" />
+				<img
+					className="mountLeft"
+					src="mountLeft.png"
+					id="mountLeft"
+					style={{ width: 100 + offset * 0.3 + "%" }}
+				/>
 				<img
 					className="mountRight"
 					src="mountRight.png"
-					id="mountRight"
+					id="mountReft"
+					style={{ width: 100 + offset * 0.3 + "%" }}
 				/>
-
 				<div className="typewriter">
 					<h2 id="text">Outdoor Dev</h2>
 				</div>
 			</section>
 
-			<div className="typewriter d-flex justify-content-center">
-				<h1>Always Creating</h1>
-			</div>
-			<div className="buttons d-flex justify-content-center ">
-				<button className="btn first text-white mr-5">ABOUT</button>
-				<button className="btn second text-white mr-5">
-					PORTFOLIO
-				</button>
-				<button className="btn third text-white">CONTACT</button>
+			<div className="content">
+				<h1> Always Creating</h1>
 			</div>
 		</>
 	);
