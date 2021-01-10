@@ -19,7 +19,7 @@ export function Home() {
 				<img className="mountain" src="mountain.png" id="mountain" />
 				<img
 					className="mountLeft"
-					src="mountLeft.png"
+					src="frontMount.jpg"
 					id="mountLeft"
 					style={{ width: 100 + offset * 0.3 + "%" }}
 				/>

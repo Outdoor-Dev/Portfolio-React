@@ -8,9 +8,8 @@ import "bootstrap";
 //include your index.scss file into the bundle
 import "../styles/index.scss";
 import "../img/mountain.png";
-import "../img/mountLeft.png";
+import "../img/frontMount.jpg";
 import "../img/mountRight.png";
-
 //import your own components
 import { Home } from "./component/home.js";
 
