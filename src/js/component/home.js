@@ -10,32 +10,30 @@ export function Home() {
 
 	return (
 		<>
-			<section>
-				<img
-					className="video"
-					src="https://wallpaperaccess.com/full/17515.jpg"
-				/>
-
-				<img className="mountain" src="mountain.png" id="mountain" />
-				<img
-					className="mountLeft"
-					src="frontMount.jpg"
-					id="mountLeft"
-					style={{ width: 100 + offset * 0.3 + "%" }}
-				/>
-				<img
-					className="mountRight"
-					src="mountRight.png"
-					id="mountReft"
-					style={{ width: 100 + offset * 0.3 + "%" }}
-				/>
-				<div className="typewriter">
-					<h2 id="text">Outdoor Dev</h2>
+			<div className="App">
+				<div className="zoom">
+					<img
+						src="leftside.png"
+						alt=""
+						id="leftside"
+						style={{ width: 100 + offset * 0.3 + "%" }}
+					/>
+					<img
+						src="rightside.png"
+						alt=""
+						id="rightside"
+						style={{ width: 100 + offset * 0.3 + "%" }}
+					/>
+					<hi
+						className="text"
+						style={{ top: `-${100 + offset * 0.3 + "%"} ` }}>
+						{" "}
+						OUTDOOR DEV
+					</hi>
 				</div>
-			</section>
-
-			<div className="content">
-				<h1> Always Creating</h1>
+				<div className="content">
+					<h2>Always Creating</h2>
+				</div>
 			</div>
 		</>
 	);
